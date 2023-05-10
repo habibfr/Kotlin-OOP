@@ -42,10 +42,12 @@ class Address{
   constructor(st: String, ct: String, co: String) : this(st, ct){
     country = co
   }
-
-
 }
 
+// properties constructor
+class User(var username: String, var password: String){
+
+}
 
 
 fun main() {
@@ -58,14 +60,21 @@ fun main() {
   // val car2 = Car("Mercedez")
   // println(car2.brand + " " + car2.year)
 
-  val address = Address("malamb", "citys")
-  println(address.street)
-  println(address.city)
-  println(address.country)
+  // val address = Address("malamb", "citys")
+  // println(address.street)
+  // println(address.city)
+  // println(address.country)
   
-  val address2 = Address("tes", "ya", "yo")
-  println(address2.street)
-  println(address2.city)
-  println(address2.country)
+  // val address2 = Address("tes", "ya", "yo")
+  // println(address2.street)
+  // println(address2.city)
+  // println(address2.country)
+
+  val user1 = User("Habib", "rahasia")
+  val user2 = User("Budi", "rahasia123")
   
+  println(user1.username)
+  println(user1.password)
+  println(user2.username)
+  println(user2.password)
 }
