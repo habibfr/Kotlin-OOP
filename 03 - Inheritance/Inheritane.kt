@@ -33,6 +33,18 @@ class SuperManager(name: String) : Manager(name){
   // }
 }
 
+open class Shape{
+  open var corner: Int  = -1
+}
+
+class Rectangle : Shape(){
+  override var corner: Int = 4
+}
+
+class Triangle : Shape(){
+  override var corner: Int = 3
+}
+
 fun main(){
   // inheritance
   // val manager1 = Manager("Habib");
@@ -50,13 +62,22 @@ fun main(){
   // vp1.sayManager()
   // vp1.sayVP()
 
+  // function overriding
+  // val manager = Manager("Habib")
+  // val emp = Emoployee("Budi")
+  // val vp = VicePresident("Api")
+  
+  // manager.sayHello("Budi")
+  // emp.sayHello("Api")
+  // vp.sayHello("Habib")
+  
   // properties overriding
-  val manager = Manager("Habib")
-  val emp = Emoployee("Budi")
-  val vp = VicePresident("Api")
+  val shape = Shape()
+  val rec = Rectangle()
+  val tri = Triangle()
 
-  manager.sayHello("Budi")
-  emp.sayHello("Api")
-  vp.sayHello("Habib")
-
+  println(shape.corner)
+  println(rec.corner)
+  println(tri.corner)
+  
 }
