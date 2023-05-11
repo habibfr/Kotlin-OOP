@@ -35,14 +35,26 @@ class SuperManager(name: String) : Manager(name){
 
 open class Shape{
   open var corner: Int  = -1
+
+  open fun printName(){
+    println("this is shape")
+  }
 }
 
 class Rectangle : Shape(){
   override var corner: Int = 4
+
+  // super keyword : to get value of parent
+  val parentCorner: Int = super.corner
 }
 
 class Triangle : Shape(){
   override var corner: Int = 3
+
+  override fun printName(){
+    println("this is triangle")
+    super.printName()
+  }
 }
 
 fun main(){
@@ -76,8 +88,11 @@ fun main(){
   val rec = Rectangle()
   val tri = Triangle()
 
-  println(shape.corner)
-  println(rec.corner)
-  println(tri.corner)
-  
+  // println(shape.corner)
+  // println(rec.corner)
+  // println(tri.corner)
+
+  // super keyword
+  println(rec.parentCorner)
+  tri.printName()
 }
