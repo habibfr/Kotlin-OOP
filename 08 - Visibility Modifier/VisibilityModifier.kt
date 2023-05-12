@@ -23,7 +23,7 @@ fun main(){
   // error - can't access private
   // teach.name
   // can access public matkul
-  teach.matkul
+  teach.matkul   
 
   val mhs = Mahasiswa("Habib", 20)
   mhs.sayHello("Api")
