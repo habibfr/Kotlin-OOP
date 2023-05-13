@@ -72,7 +72,7 @@ fun main(){
   val allGender: Array<Gender> = Gender.values()
   
   println(Gender.valueOf("MALE"))
-  val womenFromString = Gender.valueOf("FEMALE")
+  println(Gender.valueOf("FEMALE"))
   println(man)
   println(women)
   println(allGender.toList())
